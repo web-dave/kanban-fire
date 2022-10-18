@@ -2,4 +2,14 @@
   <mat-icon>local_fire_department</mat-icon>
   <span>Kanban Fire</span>
 </mat-toolbar>
+<ngx-auth-firebaseui-login
+  [providers]="authProviders"
+  *ngIf="!(user$ | async)"
+  (onSuccess)="printUser($event)"
+  (onError)="printError($event)"
+>
+</ngx-auth-firebaseui-login>
+<button *ngIf="user$ | async" (click)="logout()">logout</button>
+<!-- <pre>{{ user$ | async | json }}</pre> -->
+<ngx-auth-firebaseui-user></ngx-auth-firebaseui-user>
 <router-outlet></router-outlet>
