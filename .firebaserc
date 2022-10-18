@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "kanbanfire-ddb91": {
+      "hosting": {
+        "kanban-fire": [
+          "kanbanfire-ddb91"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "kanbanfire-ddb91"
+  }
+}
